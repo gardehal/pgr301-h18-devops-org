@@ -1,12 +1,12 @@
 jobs:
-- name: deploy-github-teams
+- name: deploy-github-changes
   plan:
   - aggregate:
-    - get: test-pgr301-h18
+    - get: pgr301-h18-devops-org
       trigger: true
   - task: apply
-    file: test-pgr301-h18/concourse/tasks/terraform/task.yml
-    input_mapping: {source: test-pgr301-h18}
+    file: pgr301-h18-devops-org/concourse/tasks/terraform/task.yml
+    input_mapping: {source: pgr301-h18-devops-org}
     params:
       github_token: ((github_token))
       command: apply
@@ -15,8 +15,8 @@ jobs:
 
 resources:
 
-- name: test-pgr301-h18
+- name: pgr301-h18-devops-org
   type: git
   source:
-    uri: https://github.com/grdall/test-pgr301-h18.git
+    uri: git@github.com:grdall/pgr301-h18-devops-org.git
     branch: master

@@ -3,7 +3,8 @@
 # It must be provided as a variable called token in the provider, but it safest if it is sourced from the GITHUB_TOKEN
 # environment variable.
 
-provider "github" {
-  organization = "test-pgr301-h18-pls-no-join"
+provider "github"
+{
+  organization = "pgr301-h18-grdall"
 }
 
