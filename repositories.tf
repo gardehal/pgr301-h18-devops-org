@@ -35,3 +35,17 @@ resource "github_repository" "l7"
   description = "Lesson 7: Heroku, Pipelines, Deploy Cycle"
   private = false
 }
+
+resource "github_repository" "l8-heroku-pipeline-app"
+{
+  name = "l8-heroku-pipeline-app"
+  description = "Lesson 8: Heroku, Environment Parity"
+  private = false
+}
+
+resource "github_repository" "l8-heroku-pipeline-app"
+{
+  name = "l8-heroku-pipeline-app"
+  description = "Lesson 8: Heroku, Environment Parity"
+  private = false
+}
